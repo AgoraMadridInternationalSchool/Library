@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos de la Biblioteca - Agora Madrid</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Variables y ajustes generales */
+        :root {
+            --primary-color: #003366; /* Azul corporativo (ajusta a tu gusto) */
+            --hover-color: #004080;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            height: 100%;
+            /* FOTO DE FONDO DE LA BIBLIOTECA */
+            background-image: url('biblioteca.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        /* Capa oscura para que el fondo no impida leer */
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Barra superior */
+        .top-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            box-sizing: border-box;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logos img {
+            height: 60px;
+            width: auto;
+        }
+        .lang-switcher {
+            display: flex;
+            gap: 15px;
+        }
+        .lang-switcher img {
+            width: 35px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .lang-switcher img:hover { transform: scale(1.1); }
+
+        /* Contenedor central (Glassmorphism) */
+        .main-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 900px;
+            width: 90%;
+            margin: 40px auto;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            margin-top: 0;
+        }
+
+        /* Botones de los programas IB */
+        .programs-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+        .program-card {
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px 20px;
+            width: 220px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .program-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,51,102,0.15);
+        }
+        .program-card img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+        }
+        .program-card span {
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+
+        /* Sección de Contacto */
+        .contact-section {
+            border-top: 1px solid #ddd;
+            padding-top: 30px;
+        }
+        .contact-section h2 {
+            color: #444;
+            font-size: 1.5em;
+            margin-bottom: 25px;
+        }
+        .contacts-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .email-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .email-btn:hover { background: var(--hover-color); }
+        .email-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* Lógica para ocultar el idioma inactivo */
+        html[lang="en"] .lang-es { display: none; }
+        html[lang="es"] .lang-en { display: none; }
+    </style>
+</head>
+<body lang="es">
+
+<div class="overlay">
+    
+    <div class="top-bar">
+        <div class="logos">
+            <img src="logo-colegio.png" alt="Logo Colegio" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x60?text=Logo+Colegio'">
+        </div>
+        <div class="lang-switcher">
+            <img src="https://flagcdn.com/w40/es.png" alt="Español" title="Ver en Español" onclick="setLanguage('es')">
+            <img src="https://flagcdn.com/w40/gb.png" alt="English" title="View in English" onclick="setLanguage('en')">
+        </div>
+    </div>
+
+    <div class="main-card">
+        
+        <h1 class="lang-es">Recursos digitales de la biblioteca</h1>
+        <h1 class="lang-en">Digital Library Resources</h1>
+
+        <div class="programs-grid">
+            
+            <a href="#" class="program-card">
+                <img src="logo-pyp.png" alt="PYP Logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/100x100?text=PYP'">
+                <span class="lang-es">Infantil y Primaria</span>
+                <span class="lang-en">Early Years & Primary (PYP)</span>
+            </a>
+
+            <a href="#" class="program-card">
+                <img src="logo-myp.png" alt="MYP Logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/100x100?text=MYP'">
+                <span class="lang-es">Secundaria</span>
+                <span class="lang-en">Secondary (MYP)</span>
+            </a>
+
+            <a href="DPResources/index.html" class="program-card">
+                <img src="logo-dp.png" alt="DP Logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/100x100?text=DP'">
+                <span class="lang-es">Bachillerato</span>
+                <span class="lang-en">High School (DP)</span>
+            </a>
+            
+        </div>
+
+        <div class="contact-section">
+            <h2 class="lang-es">Contacta con las bibliotecarias</h2>
+            <h2 class="lang-en">Contact the Librarians</h2>
+            
+            <div class="contacts-grid">
+                <a href="mailto:mariapilar.garcia@agoraism.com" class="email-btn">
+                    <svg class="email-icon" viewBox="0 0 24 24">
+                        <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
+                    </svg>
+                    <span class="lang-es">Infantil y Primaria</span>
+                    <span class="lang-en">Early Years & Primary</span>
+                </a>
+
+                <a href="mailto:henar.lanchas@agoraism.com" class="email-btn">
+                    <svg class="email-icon" viewBox="0 0 24 24">
+                        <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
+                    </svg>
+                    <span class="lang-es">Secundaria y Bachillerato</span>
+                    <span class="lang-en">Secondary & High School</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function setLanguage(lang) {
+        document.documentElement.setAttribute('lang', lang);
+    }
+</script>
+
+</body>
+</html>
