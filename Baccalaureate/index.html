@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos PD (Diploma) - IB</title>
+    <link rel="icon" type="image/x-icon" href="agora_favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos básicos integrados */
+        body { margin: 0; font-family: 'Lato', sans-serif; }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+        }
+        .logos {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+        .logos img {
+            height: 50px;
+            width: auto;
+        }
+        .lang-switcher {
+            display: flex;
+            gap: 15px;
+        }
+        .lang-switcher img {
+            width: 35px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .lang-switcher img:hover {
+            transform: scale(1.1);
+        }
+        
+        /* SOLUCIÓN AL BUG: Lógica estricta de idiomas en la raíz */
+        html[lang="en"] .lang-es { display: none; }
+        html[lang="es"] .lang-en { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="logos">
+            <img src="LogoColegio.jpg" alt="Logo Colegio" onerror="this.onerror=null; this.src='https://via.placeholder.com/150x50?text=Logo+Colegio'">
+            <img src="Diploma-programme.png" alt="IB Diploma Logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/150x50?text=Logo+Colegio'">
+        </div>
+        <div class="lang-switcher">
+            <img src="https://flagcdn.com/w40/es.png" alt="Español" title="Ver en Español" onclick="setLanguage('es')">
+            <img src="https://flagcdn.com/w40/gb.png" alt="English" title="View in English" onclick="setLanguage('en')">
+        </div>
+    </div>
+
+    <div class="header">
+        <h1 class="lang-es">Recursos para el Programa del Diploma (PD / DP)</h1>
+        <h1 class="lang-en">Resources for the Diploma Programme (DP)</h1>
+        
+        <p class="lang-es">Herramientas avanzadas para la investigación académica, gestión de fuentes y apoyo a los componentes troncales: Monografía, Teoría del Conocimiento y CAS.</p>
+        <p class="lang-en">Advanced tools for academic research, citation management, and support for the core components: Extended Essay, Theory of Knowledge, and CAS.</p>
+    </div>
+
+    <div class="container">
+        
+        <div class="card">
+            <h2 class="lang-es">Monografía (Extended Essay)</h2>
+            <h2 class="lang-en">Extended Essay (EE)</h2>
+            <ul>
+                <li><a href="https://www.ibo.org/programmes/diploma-programme/curriculum/extended-essay/" target="_blank">
+                    <span class="lang-es">Guía Oficial de la Monografía</span><span class="lang-en">Official EE Guide</span>
+                </a>
+                <p class="lang-es">Documentación del IB con los criterios de evaluación y requisitos.</p>
+                <p class="lang-en">IB documentation with assessment criteria and requirements.</p></li>
+                
+                <li><a href="https://owl.purdue.edu/owl/research_and_citation/resources.html" target="_blank">Purdue OWL</a>
+                <p class="lang-es">Guías exhaustivas sobre cómo formular preguntas de investigación y citar en cualquier formato (APA, MLA, Chicago).</p>
+                <p class="lang-en">Comprehensive guides on how to formulate research questions and cite in any format (APA, MLA, Chicago).</p></li>
+                
+                <li><a href="https://archive.org/" target="_blank">Internet Archive</a>
+                <p class="lang-es">Acceso a millones de libros, textos y fuentes primarias digitalizadas.</p>
+                <p class="lang-en">Access to millions of digitized books, texts, and primary sources.</p></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="lang-es">Bases de Datos Académicas</h2>
+            <h2 class="lang-en">Academic Databases</h2>
+            <ul>
+                <li><a href="https://www.jstor.org/" target="_blank">JSTOR</a>
+                <p class="lang-es">Una de las bibliotecas digitales más importantes para acceder a journals y artículos académicos.</p>
+                <p class="lang-en">One of the most important digital libraries to access academic journals and articles.</p></li>
+                
+                <li><a href="https://scholar.google.es/" target="_blank">
+                    <span class="lang-es">Google Académico</span><span class="lang-en">Google Scholar</span>
+                </a>
+                <p class="lang-es">Esencial para encontrar literatura académica y ver cómo se citan los trabajos entre sí.</p>
+                <p class="lang-en">Essential for finding academic literature and seeing how works cite each other.</p></li>
+                
+                <li><a href="https://www.bne.es/es/catalogos/todos-los-catalogos" target="_blank">
+                    <span class="lang-es">Biblioteca Nacional de España</span><span class="lang-en">National Library of Spain</span>
+                </a>
+                <p class="lang-es">Acceso a catálogos y colecciones digitales de gran valor para investigaciones humanísticas.</p>
+                <p class="lang-en">Access to catalogs and highly valuable digital collections for humanistic research.</p></li>
+                
+                <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a>
+                <p class="lang-es">Base de datos de referencia para investigación en ciencias de la salud y biomedicina.</p>
+                <p class="lang-en">Reference database for research in health sciences and biomedicine.</p></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="lang-es">Gestión de Bibliografía</h2>
+            <h2 class="lang-en">Bibliography Management</h2>
+            <ul>
+                <li><a href="https://www.zotero.org/" target="_blank">Zotero</a>
+                <p class="lang-es">Software gratuito para gestionar tus fuentes, tomar notas y crear bibliografías automáticamente en tu procesador de texto.</p>
+                <p class="lang-en">Free software to manage your sources, take notes, and automatically create bibliographies in your word processor.</p></li>
+                
+                <li><a href="https://www.mendeley.com/" target="_blank">Mendeley</a>
+                <p class="lang-es">Otra excelente herramienta para organizar tus PDFs de investigación y colaborar con otros.</p>
+                <p class="lang-en">Another excellent tool for organizing your research PDFs and collaborating with others.</p></li>
+                
+                <li><a href="https://www.citationmachine.net/" target="_blank">Citation Machine</a>
+                <p class="lang-es">Generador de citas que ayuda a formatear tus fuentes correctamente en los principales estilos.</p>
+                <p class="lang-en">Citation generator that helps format your sources correctly in major styles.</p></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="lang-es">Teoría del Conocimiento (TdC)</h2>
+            <h2 class="lang-en">Theory of Knowledge (TOK)</h2>
+            <ul>
+                <li><a href="https://plato.stanford.edu/" target="_blank">Stanford Encyclopedia of Philosophy</a>
+                <p class="lang-es">Recurso de nivel universitario para explorar conceptos filosóficos y áreas del conocimiento.</p>
+                <p class="lang-en">University-level resource to explore philosophical concepts and areas of knowledge.</p></li>
+                
+                <li><a href="https://www.ted.com/talks?language=es" target="_blank">
+                    <span class="lang-es">TED Talks en Español</span><span class="lang-en">TED Talks</span>
+                </a>
+                <p class="lang-es">Charlas de expertos sobre una infinidad de temas que invitan a la reflexión y el cuestionamiento.</p>
+                <p class="lang-en">Expert talks on an endless variety of topics that invite reflection and questioning.</p></li>
+                
+                <li><a href="https://elpais.com/ideas/" target="_blank">El País - Ideas</a>
+                <p class="lang-es">Sección con ensayos y artículos de fondo sobre filosofía, ciencia y sociedad.</p>
+                <p class="lang-en">Section featuring essays and in-depth articles on philosophy, science, and society.</p></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="lang-es">Creatividad, Actividad, Servicio (CAS)</h2>
+            <h2 class="lang-en">Creativity, Activity, Service (CAS)</h2>
+            <ul>
+                <li><a href="https://www.unv.org/es" target="_blank">
+                    <span class="lang-es">Voluntarios de las Naciones Unidas</span><span class="lang-en">UN Volunteers</span>
+                </a>
+                <p class="lang-es">Plataforma para encontrar oportunidades de voluntariado en línea y presenciales a nivel global.</p>
+                <p class="lang-en">Platform to find online and on-site volunteering opportunities globally.</p></li>
+                
+                <li><a href="https://www.hacesfalta.org/" target="_blank">Hacesfalta.org</a>
+                <p class="lang-es">Portal de voluntariado de referencia en España para encontrar proyectos sociales.</p>
+                <p class="lang-en">Leading volunteering portal in Spain for finding social projects.</p></li>
+                
+                <li><a href="https://www.instructables.com/" target="_blank">Instructables</a>
+                <p class="lang-es">Comunidad para encontrar inspiración y guías paso a paso para proyectos creativos y técnicos.</p>
+                <p class="lang-en">Community to find inspiration and step-by-step guides for creative and technical projects.</p></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="lang-es">Probidad Académica Avanzada</h2>
+            <h2 class="lang-en">Advanced Academic Integrity</h2>
+            <ul>
+                <li><a href="https://www.ibo.org/es/programmes/diploma-programme/assessment-and-exams/academic-integrity/" target="_blank">
+                    <span class="lang-es">Probidad Académica según el IB</span><span class="lang-en">Academic Integrity by the IB</span>
+                </a>
+                <p class="lang-es">La página oficial del IB sobre la importancia y las políticas de la honestidad académica en el PD.</p>
+                <p class="lang-en">The official IB page on the importance and policies of academic honesty in the DP.</p></li>
+                
+                <li><a href="https://normas-apa.org/" target="_blank">
+                    <span class="lang-es">Normas APA (7ª ed.)</span><span class="lang-en">APA Style (7th ed.)</span>
+                </a>
+                <p class="lang-es">Guía detallada en español para aplicar el formato de citación APA.</p>
+                <p class="lang-en">Detailed guide to applying the APA citation format.</p></li>
+                
+                <li><a href="https://writing.wisc.edu/handbook/assignments/quotingsources/" target="_blank">
+                    <span class="lang-es">Guía sobre Citas (U. Wisconsin)</span><span class="lang-en">Quoting Sources Guide (U. Wisconsin)</span>
+                </a>
+                <p class="lang-es">Excelentes consejos sobre cuándo citar, parafrasear o resumir (en inglés).</p>
+                <p class="lang-en">Excellent advice on when to quote, paraphrase, or summarize.</p></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="lang-es">Grupo 1: Estudios de Lengua y Literatura</h2>
+            <h2 class="lang-en">Group 1: Studies in Language and Literature</h2>
+            <ul>
+                <li><a href="https://www.litcharts.com/" target="_blank">LitCharts</a>
+                <p class="lang-es">Guías detalladas de análisis literario, temas y símbolos para las obras del currículo.</p>
+                <p class="lang-en">Detailed literary analysis guides, themes, and symbols for curriculum works.</p></li>
+                
+                <li><a href="https://www.oxfordstudycourses.com/ib-english-resources" target="_blank">OSC English</a>
+                <p class="lang-es">Recursos y consejos para el análisis de textos no literarios y el comentario de texto.</p>
+                <p class="lang-en">Resources and tips for non-literary text analysis and textual commentary.</p></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="lang-es">Grupo 2: Adquisición de Lenguas</h2>
+            <h2 class="lang-en">Group 2: Language Acquisition</h2>
+            <ul>
+                <li><a href="https://www.newsinslowspanish.com/" target="_blank">News in Slow Spanish/French/Italian</a>
+                <p class="lang-es">Noticias adaptadas para practicar la comprensión auditiva y el vocabulario actual.</p>
+                <p class="lang-en">Adapted news to practice listening comprehension and current vocabulary.</p></li>
+                
+                <li><a href="https://www.wordreference.com/" target="_blank">WordReference</a>
+                <p class="lang-es">Diccionario esencial con foros especializados en modismos y contextos específicos.</p>
+                <p class="lang-en">Essential dictionary with specialized forums on idioms and specific contexts.</p></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="lang-es">Grupo 3: Individuos y Sociedades</h2>
+            <h2 class="lang-en">Group 3: Individuals and Societies</h2>
+            <ul>
+                <li><a href="https://www.tutor2u.net/economics" target="_blank">Tutor2u Economics / Business</a>
+                <p class="lang-es">Explicaciones claras de conceptos, diagramas y estudios de caso para Economía y Gestión Empresarial.</p>
+                <p class="lang-en">Clear explanations of concepts, diagrams, and case studies for Economics and Business Management.</p></li>
+                
+                <li><a href="https://www.activehistory.co.uk/" target="_blank">ActiveHistory</a>
+                <p class="lang-es">Recursos interactivos y simulaciones para el programa de Historia del IB.</p>
+                <p class="lang-en">Interactive resources and simulations for the IB History syllabus.</p></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="lang-es">Grupo 4: Ciencias</h2>
+            <h2 class="lang-en">Group 4: Sciences</h2>
+            <ul>
+                <li><a href="https://old-biologos.ib.bioninja.com.au/" target="_blank">BioNinja</a>
+                <p class="lang-es">La referencia absoluta para Biología IB, organizada por temas del programa.</p>
+                <p class="lang-en">The absolute reference for IB Biology, organized by syllabus topics.</p></li>
+                
+                <li><a href="https://www.khanacademy.org/science/physics" target="_blank">Khan Academy - Ciencias</a>
+                <p class="lang-es">Lecciones en video y ejercicios prácticos para Química y Física.</p>
+                <p class="lang-en">Video lessons and practical exercises for Chemistry and Physics.</p></li>
+                
+                <li><a href="https://www.phet.colorado.edu/es/" target="_blank">PhET Simulaciones</a>
+                <p class="lang-es">Simulaciones interactivas de física y química, ideales para entender conceptos complejos e IAs.</p>
+                <p class="lang-en">Interactive physics and chemistry simulations, ideal for understanding complex concepts and IAs.</p></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="lang-es">Grupo 5: Matemáticas</h2>
+            <h2 class="lang-en">Group 5: Mathematics</h2>
+            <ul>
+                <li><a href="https://www.revisionvillage.com/" target="_blank">Revision Village</a>
+                <p class="lang-es">Considerado el mejor recurso para prácticas de exámenes de Matemáticas AA y AI.</p>
+                <p class="lang-en">Considered the best resource for Mathematics AA and AI exam practice.</p></li>
+                
+                <li><a href="https://www.desmos.com/calculator?lang=es" target="_blank">Desmos</a>
+                <p class="lang-es">Calculadora gráfica online para visualizar funciones y realizar análisis de datos.</p>
+                <p class="lang-en">Online graphing calculator to visualize functions and perform data analysis.</p></li>
+                
+                <li><a href="https://www.geogebra.org/?lang=es" target="_blank">GeoGebra</a>
+                <p class="lang-es">Herramienta dinámica para geometría, álgebra y cálculo.</p>
+                <p class="lang-en">Dynamic mathematics tool for geometry, algebra, and calculus.</p></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="lang-es">Grupo 6: Artes</h2>
+            <h2 class="lang-en">Group 6: The Arts</h2>
+            <ul>
+                <li><a href="https://www.metmuseum.org/art/online-features" target="_blank">
+                    <span class="lang-es">The Met - Recursos Online</span><span class="lang-en">The Met - Online Resources</span>
+                </a>
+                <p class="lang-es">Acceso a colecciones y análisis históricos para Artes Visuales.</p>
+                <p class="lang-en">Access to collections and historical analysis for Visual Arts.</p></li>
+                
+                <li><a href="https://www.google.com/culturalinstitute/beta/" target="_blank">Google Arts & Culture</a>
+                <p class="lang-es">Explora museos y movimientos artísticos en alta resolución para el Comparative Study.</p>
+                <p class="lang-en">Explore museums and art movements in high resolution for the Comparative Study.</p></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p class="lang-es">Recursos seleccionados para la comunidad del IB. Para un mejor aprovechamiento, consulta siempre a tu bibliotecario/a o profesor/a.</p>
+        <p class="lang-en">Selected resources for the IB community. For best results, always consult your librarian or teacher.</p>
+    </footer>
+
+    <script>
+        // SOLUCIÓN AL BUG: Ahora cambiamos el idioma de la etiqueta <html> directamente, no del <body>
+        function setLanguage(lang) {
+            document.documentElement.setAttribute('lang', lang);
+        }
+    </script>
+</body>
+</html>
